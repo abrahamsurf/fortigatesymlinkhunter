@@ -1,4 +1,4 @@
-**FortiOS Symlink Backdoor Hunter**
+**FortiOS Symlink Backdoor Hunter** <p>
 A shell script to detect symlink-based backdoors targeting Fortinet FortiGate devices. It scans known FortiOS directories for malicious symbolic links and offers an optional full filesystem scan for additional threats.
 
 🚀 **Features**
