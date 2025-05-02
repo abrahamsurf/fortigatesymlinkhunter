@@ -48,10 +48,10 @@ Check the generated report file (e.g., symlink_backdoor_report_20250503_145812.t
     Link: /data/etc/tls/locallang/en -> /etc/shadow
     Remove: rm -f "/data/etc/tls/locallang/en"
 
--e ==============================================
--e    FortiOS Symlink Backdoor Hunter           
--e            Abraham-Surf                      
--e ==============================================
+==============================================
+    FortiOS Symlink Backdoor Hunter           
+            Abraham-Surf                      
+==============================================
 
 Starting scan of known FortiOS web/VPN folders...
 Scanning known FortiOS web/VPN folders...
