@@ -1,8 +1,7 @@
-**FortiOS Symlink Backdoor Hunter
-**
+**FortiOS Symlink Backdoor Hunter**
 A shell script to detect symlink-based backdoors targeting Fortinet FortiGate devices. It scans known FortiOS directories for malicious symbolic links and offers an optional full filesystem scan for additional threats.
 
-🚀 Features
+🚀 **Features**
 
 Scans Fortinet-specific directories:
 
@@ -22,7 +21,7 @@ Generates a timestamped report with findings and remediation steps
 
 Colorful ASCII banner for visibility
 
-📦 Requirements
+**📦 Requirements**
 
 FortiGate with shell access (CLI > execute shell)
 
@@ -30,7 +29,7 @@ sh shell available
 
 Basic UNIX utilities like find, readlink, grep, awk
 
-🛠 Usage
+**🛠 Usage**
 
 Upload the script to your FortiGate device.
 
@@ -43,13 +42,33 @@ Follow the prompt when asked whether to scan the full filesystem.
 
 Check the generated report file (e.g., symlink_backdoor_report_20250503_145812.txt) for findings.
 
-📄 Output Example
+**📄 Output Example**
 
 🚨 Malicious symlink spotted:
     Link: /data/etc/tls/locallang/en -> /etc/shadow
     Remove: rm -f "/data/etc/tls/locallang/en"
 
-🧹 Remediation
+-e ==============================================
+-e    FortiOS Symlink Backdoor Hunter           
+-e            Abraham-Surf                      
+-e ==============================================
+
+Starting scan of known FortiOS web/VPN folders...
+Scanning known FortiOS web/VPN folders...
+[WARN] Directory missing: /data/etc/tls/locallang/
+[WARN] Directory missing: /data/lib/webssl/
+[WARN] Directory missing: /data/etc/tls/
+
+[?] Would you like to scan the entire filesystem for suspicious symlinks? (Y/N): n
+Skipping full filesystem scan.
+-e 
+[RESULT] No suspicious symlinks found. Your device appears clean.
+Report saved to: **symlink_backdoor_report_20250503_002737.txt**
+-e 
+Scan complete.
+
+
+**🧹 Remediation**
 
 If any malicious links are detected:
 
@@ -61,6 +80,6 @@ Rotate all credentials and API keys
 
 Audit and limit web/SSL VPN access
 
-🔐 Disclaimer
+**🔐 Disclaimer**
 
 This script is provided for forensic and security operations purposes. Run it at your own risk in production environments. Always test in staging before deployment.
